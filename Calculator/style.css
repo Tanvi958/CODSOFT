@@ -1,0 +1,120 @@
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Beautiful Blue Gradient Background */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #0d47a1, #2196f3, #e3f2fd);
+    color: #333;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Snowflakes Animation */
+@keyframes snowfall {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: snowfall 5s linear infinite;
+}
+
+/* Randomized Positions */
+.snowflake:nth-child(1) { left: 5%; animation-duration: 6s; }
+.snowflake:nth-child(2) { left: 15%; animation-duration: 4s; }
+.snowflake:nth-child(3) { left: 25%; animation-duration: 5s; }
+.snowflake:nth-child(4) { left: 35%; animation-duration: 7s; }
+.snowflake:nth-child(5) { left: 50%; animation-duration: 3s; }
+.snowflake:nth-child(6) { left: 65%; animation-duration: 6s; }
+.snowflake:nth-child(7) { left: 75%; animation-duration: 4s; }
+.snowflake:nth-child(8) { left: 85%; animation-duration: 5s; }
+.snowflake:nth-child(9) { left: 95%; animation-duration: 7s; }
+
+/* Container */
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+/* Calculator */
+.calculator {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Display Screen */
+.display-screen {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.2);
+    font-size: 30px;
+    text-align: right;
+    width: 100%;
+    max-width: 280px;
+    overflow-x: scroll;
+}
+
+/* Hide Scrollbar */
+.display-screen::-webkit-scrollbar {
+    display: none;
+}
+
+/* Buttons */
+button {
+    font-size: 20px;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to top, #dfe6e9, #ffffff);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3), inset 0px -2px 4px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Button Click Effect */
+button:active {
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Special Button Styles */
+button#clear {
+    background: linear-gradient(to top, #ffdddd, #ffffff);
+    color: #d32f2f;
+}
+
+button.btn-number {
+    background: linear-gradient(to top, #e3f2fd, #ffffff);
+    color: #000;
+}
+
+button.btn-operator {
+    background: linear-gradient(to top, #b2dfdb, #ffffff);
+    color: #00796b;
+}
+
+button.btn-equal {
+    background: linear-gradient(to top, #c5e1a5, #ffffff);
+    color: #388e3c;
+}
